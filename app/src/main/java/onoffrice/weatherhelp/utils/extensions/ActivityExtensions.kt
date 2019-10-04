@@ -9,7 +9,6 @@ import android.net.Uri
 import android.os.Handler
 import android.view.inputmethod.InputMethodManager
 import android.widget.Toast
-import onoffrice.weatherhelp.utils.widgets.dialog.DefaultErrorDialog
 import onoffrice.weatherhelp.R
 import java.io.Serializable
 
@@ -104,8 +103,8 @@ fun Context.externalShare(content: String) {
 }
 
 fun Context.openLocationInExternalApps(latitude: Double, longitude: Double, title: String = "Selecione um aplicativo") {
-    val  url = "waze://?ll=$latitude,$longitude&navigate=yes";
-    val  intentWaze = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+    val url = "waze://?ll=$latitude,$longitude&navigate=yes";
+    val intentWaze = Intent(Intent.ACTION_VIEW, Uri.parse(url))
     intentWaze.setPackage("com.waze")
 
     val uriGoogle = "google.navigation:q=$latitude,$longitude"
@@ -116,59 +115,6 @@ fun Context.openLocationInExternalApps(latitude: Double, longitude: Double, titl
     chooserIntent.putExtra(Intent.EXTRA_INITIAL_INTENTS, arrayOf(intentWaze))
 
     startActivity(chooserIntent)
-}
-
-fun Context.displayDefaultErrorDialog(
-        icon: Int? = null,
-        title: Int? = null,
-        body: Int? = null,
-        leftBtnText: Int? = null,
-        leftAction: (() -> Unit)? = null,
-        rightBtnText: Int? = null,
-        rightAction: (() -> Unit)? = null,
-        isCancelable: Boolean = true,
-        dismissAction: (() -> Unit)? = null
-): DefaultErrorDialog =
-    displayDefaultErrorDialog(
-            icon = icon,
-            title = title,
-            body = if(body != null) getString(body) else null,
-            leftBtnText = leftBtnText,
-            leftAction = leftAction,
-            rightBtnText = rightBtnText,
-            rightAction = rightAction,
-            isCancelable = isCancelable,
-            dismissAction = dismissAction
-    )
-
-
-fun Context.displayDefaultErrorDialog(
-        icon: Int? = null,
-        title: Int? = null,
-        body: String? = null,
-        leftBtnText: Int? = null,
-        leftAction: (() -> Unit)? = null,
-        rightBtnText: Int? = null,
-        rightAction: (() -> Unit)? = null,
-        isCancelable: Boolean = true,
-        dismissAction: (() -> Unit)? = null
-): DefaultErrorDialog {
-    val dialog = DefaultErrorDialog(
-            context = this,
-            icon =  icon ?: R.drawable.ic_warning,
-            title = if(title != null) getString(title) else getString(R.string.common_error_title),
-            body = body,
-            leftBtnText = if(leftBtnText != null) getString(leftBtnText) else null,
-            leftAction = leftAction,
-            rightBtnText = if(rightBtnText != null) getString(rightBtnText) else null,
-            rightAction = rightAction,
-            isCancelable = isCancelable,
-            dismissAction = dismissAction
-    )
-    dialog.window?.attributes?.windowAnimations = R.style.DialogAnimation
-    if(!dialog.isShowing) dialog.show()
-    return dialog
-
 }
 
 fun Context.checkCameraFront(): Boolean {

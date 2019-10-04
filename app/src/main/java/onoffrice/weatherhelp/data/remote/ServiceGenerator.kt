@@ -1,8 +1,6 @@
 package onoffrice.weatherhelp.data.remote
 
 import onoffrice.weatherhelp.NetworkConstants
-import onoffrice.weatherhelp.data.remote.interceptors.AddCookieInterceptor
-import onoffrice.weatherhelp.data.remote.interceptors.ReceivedCookieInterceptor
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -39,9 +37,7 @@ class ServiceGenerator {
                     .addCallAdapterFactory(RxErrorHandlingCallAdapterFactory.create())
 
             val httpClient = OkHttpClient.Builder()
-            httpClient.addInterceptor(ReceivedCookieInterceptor())
-                    .addInterceptor(AddCookieInterceptor())
-                    .addInterceptor(HttpLoggingInterceptor()
+            httpClient.addInterceptor(HttpLoggingInterceptor()
                             .setLevel(if (BuildConfig.DEBUG) HttpLoggingInterceptor.Level.BODY else HttpLoggingInterceptor.Level.NONE))
 
 
