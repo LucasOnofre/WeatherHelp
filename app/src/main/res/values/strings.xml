@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">WeatherHelp</string>
+
+    <!--ACTIONS-->
+    <string name="action_understood">Ok, entendi</string>
+    <string name="action_ok">OK, Entendi</string>
+    <string name="action_cancel">Cancelar</string>
+
+    <!--COMMON MESSAGES-->
+    <string name="common_error_title">Ops!</string>
+    <string name="continue_action">Continuar</string>
+    <string name="action_finish">Finalizar</string>
+    <string name="try_again_action">Tentar Novamente</string>
+
+    <!--DIALOG MESSAGES-->
+    <string name="progress_dialog_standard_msg">Aguarde um momento.</string>
+
+    <!--NETWORK ERRORS-->
+    <string name="network_error_timeout">Erro inesperado, por favor tente novamente.</string>
+    <string name="network_error_without_connection">Rede indisponível.</string>
+
+    <!--CONTENT DESCRIPTION-->
+    <string name="error">Erro</string>
 </resources>
