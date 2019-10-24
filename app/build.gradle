@@ -13,7 +13,8 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        buildConfigField "String", 'BASE_URL', "\"http://servicos.cptec.inpe.br/XML/\""
+        buildConfigField "String", 'BASE_URL', "\"http://apiadvisor.climatempo.com.br/api/v1\""
+        buildConfigField "String", "API_KEY", "\"c71f1679d9701ee5371476edf6df27be\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

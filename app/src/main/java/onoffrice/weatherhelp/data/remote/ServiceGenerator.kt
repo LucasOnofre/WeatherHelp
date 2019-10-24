@@ -4,14 +4,14 @@ import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import onoffrice.weatherhelp.BuildConfig
 import retrofit2.Retrofit
-import retrofit2.converter.simplexml.SimpleXmlConverterFactory
+import retrofit2.converter.gson.GsonConverterFactory
 
 class ServiceGenerator {
     companion object {
         fun <S> createService(serviceClass: Class<S>, url: String): S {
             val retrofit = Retrofit.Builder()
                     .baseUrl(url)
-                    .addConverterFactory(SimpleXmlConverterFactory.create())
+                    .addConverterFactory(GsonConverterFactory.create())
                     .addCallAdapterFactory(RxErrorHandlingCallAdapterFactory.create())
 
             val httpClient = OkHttpClient.Builder()

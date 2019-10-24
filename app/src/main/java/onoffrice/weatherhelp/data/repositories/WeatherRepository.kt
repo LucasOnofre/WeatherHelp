@@ -2,15 +2,15 @@ package onoffrice.weatherhelp.data.repositories
 
 import io.reactivex.Single
 import onoffrice.weatherhelp.data.remote.datasources.WeatherDataSource
-import onoffrice.weatherhelp.data.remote.models.WeatherCitysResponse
+import onoffrice.weatherhelp.data.remote.models.CitiesByState
 
 interface WeatherRepository {
 
-    fun getCitys(): Single<WeatherCitysResponse>
+    fun getCities(): Single<List<CitiesByState>>
 }
 
 object WeatherRepositoryImplementation: WeatherRepository {
-    override fun getCitys(): Single<WeatherCitysResponse> {
-        return WeatherDataSource.getCitys()
+    override fun getCities(): Single<List<CitiesByState>> {
+        return WeatherDataSource.getAllCities()
     }
 }

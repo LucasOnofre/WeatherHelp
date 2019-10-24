@@ -10,15 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0e5d9241-3a90-47d0-903b-afc0054210b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/models/WeatherResponse.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/models/CitiesByState.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/NetworkConstants.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/NetworkConstants.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/ServiceGenerator.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/ServiceGenerator.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/datasources/WeatherDataSource.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/datasources/WeatherDataSource.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/models/WeatherResponse.kt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/services/WeatherService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/services/WeatherService.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/repositories/WeatherRepository.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/repositories/WeatherRepository.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt" afterDir="false" />
@@ -47,41 +52,95 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="342">
-              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/models/WeatherResponse.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="414">
-              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+            <state relative-caret-position="378">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
-                <element signature="e#50#193#0" expanded="true" />
+                <element signature="e#39#360#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.simpleframework/simple-xml/2.7.1/2a949576bb8da7514024dc0b84efeeb2fc902a0/simple-xml-2.7.1-sources.jar!/org/simpleframework/xml/Root.java">
+        <entry file="file://$PROJECT_DIR$/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="753">
+              <caret line="49" selection-start-line="49" selection-end-line="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/repositories/WeatherRepository.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
+              <folding>
+                <element signature="e#49#208#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/datasources/WeatherDataSource.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="234">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+              <folding>
+                <element signature="e#55#223#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/NetworkConstants.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="108">
+              <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/onoffrice/weatherhelp/BuildConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="15" column="92" selection-start-line="15" selection-start-column="92" selection-end-line="15" selection-end-column="92" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/services/WeatherService.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="198">
+              <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+              <folding>
+                <element signature="e#52#242#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/models/CitiesByState.kt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="36">
-              <caret line="18" column="27" selection-start-line="18" selection-start-column="12" selection-end-line="18" selection-end-column="27" />
+              <caret line="2" selection-start-line="2" selection-end-line="3" />
             </state>
           </provider>
         </entry>
@@ -89,10 +148,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/ServiceGenerator.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
+            <state relative-caret-position="216">
+              <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
               <folding>
-                <element signature="e#43#246#0" expanded="true" />
+                <element signature="e#43#236#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -115,6 +174,7 @@
       <find>tshie</find>
       <find>base</find>
       <find>ResponseBody</find>
+      <find>WeatherCity</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,18 +209,18 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/Constants.kt" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/KoinInjector.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/ServiceGenerator.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/BaseApplication.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/NetworkConstants.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/datasources/WeatherDataSource.kt" />
         <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/datasources/WeatherDataSource.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/models/WeatherResponse.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/services/WeatherService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/repositories/WeatherRepository.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/models/WeatherResponse.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/ServiceGenerator.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/NetworkConstants.kt" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
   </component>
@@ -176,6 +236,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -207,7 +268,7 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="onoffrice" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="weatherhelp" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherHelp" type="1abcf292:AndroidViewProjectNode" />
@@ -215,8 +276,17 @@
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="onoffrice" type="cbb59c9e:AndroidPsiDirectoryNode" />
               <item name="weatherhelp" type="462c0819:PsiDirectoryNode" />
-              <item name="ui" type="462c0819:PsiDirectoryNode" />
-              <item name="home" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="remote" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="WeatherHelp" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="onoffrice" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="weatherhelp" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+              <item name="repositories" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="WeatherHelp" type="1abcf292:AndroidViewProjectNode" />
@@ -226,8 +296,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -244,6 +312,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -255,7 +324,13 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="project.structure.last.edited" value="Dependencies" />
+    <property name="project.structure.proportion" value="0.17" />
+    <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+  </component>
+  <component name="PsdUISettings">
+    <option name="LAST_EDITED_BUILD_TYPE" value="release" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -403,12 +478,18 @@
       <option name="project" value="LOCAL" />
       <updated>1571852867933</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="implementing response on XML">
+      <created>1571862906732</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1571862906732</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-151" y="-1027" width="1680" height="1027" extended-state="0" />
-    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info id="Capture Tool" order="1" />
@@ -436,28 +517,68 @@
       <window_info anchor="right" id="Fabric" order="4" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
+      <window_info id="Capture Tool" order="1" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.24908425" />
+      <window_info id="Structure" order="3" side_tool="true" />
+      <window_info id="Favorites" order="4" side_tool="true" />
+      <window_info id="Build Variants" order="5" side_tool="true" />
+      <window_info id="Image Layers" order="6" />
+      <window_info id="Designer" order="7" />
+      <window_info id="Resources Explorer" order="8" />
+      <window_info anchor="bottom" id="Logcat" order="0" sideWeight="0.4993895" weight="0.32941177" />
+      <window_info anchor="bottom" id="TODO" order="1" />
+      <window_info anchor="bottom" id="Terminal" order="2" weight="0.34438503" />
+      <window_info anchor="bottom" id="Event Log" order="3" sideWeight="0.50061053" side_tool="true" weight="0.32941177" />
+      <window_info anchor="bottom" id="Version Control" order="4" />
+      <window_info active="true" anchor="bottom" id="Build" order="5" sideWeight="0.4993895" visible="true" weight="0.24385026" />
+      <window_info anchor="bottom" id="Android Profiler" order="6" />
+      <window_info anchor="bottom" id="Run" order="7" weight="0.32941177" />
+      <window_info anchor="bottom" id="Debug" order="8" weight="0.32941177" />
+      <window_info anchor="bottom" id="Find" order="9" />
+      <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
+      <window_info anchor="right" id="Capture Analysis" order="1" />
+      <window_info anchor="right" id="Gradle" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="right" id="Fabric" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+    </layout-to-restore>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="added graddle files" />
     <MESSAGE value="setup" />
     <MESSAGE value="added both screens, ready to start" />
     <MESSAGE value="setup request and added GET lista cidades" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup request and added GET lista cidades" />
+    <MESSAGE value="implementing response on XML" />
+    <option name="LAST_COMMIT_MESSAGE" value="implementing response on XML" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt</url>
-          <line>23</line>
+          <line>22</line>
           <properties />
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt</url>
-          <line>27</line>
+          <line>26</line>
           <properties />
           <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt</url>
+          <line>21</line>
+          <properties />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="kotlin-line">
+          <url>file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt</url>
+          <line>25</line>
+          <properties />
+          <option name="timeStamp" value="5" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -482,13 +603,6 @@ import onoffrice.weatherhelp.data.remote.RetrofitException</custom-info>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/weatherhelp/Constants.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/weatherhelp/BaseApplication.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/weatherhelp/data/BaseBuilder.kt" />
-    <entry file="file://$PROJECT_DIR$/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="882">
-          <caret line="49" selection-start-line="49" selection-end-line="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/Library/Android/sdk/platforms/android-29/android.jar!/android/content/SharedPreferences.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -519,13 +633,6 @@ import onoffrice.weatherhelp.data.remote.RetrofitException</custom-info>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/utils/widgets/dialog/InputDialog.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/utils/widgets/dialog/DefaultErrorDialog.kt" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/utils/widgets/dialog/DefaultDialog.kt" />
-    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/onoffrice/weatherhelp/BuildConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="13" column="37" selection-start-line="13" selection-start-column="29" selection-end-line="13" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/local/PreferencesHelper.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
@@ -557,12 +664,12 @@ import onoffrice.weatherhelp.data.remote.RetrofitException</custom-info>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_splash.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
-      <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/Constants.kt">
       <provider selected="true" editor-type-id="text-editor">
@@ -599,13 +706,6 @@ import onoffrice.weatherhelp.data.remote.RetrofitException</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="40" column="33" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.koin/koin-core/2.0.1/fb8806444773bba5ca3903a43c6b49bdf95a31d4/koin-core-2.0.1-sources.jar!/org/koin/core/context/GlobalContext.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="467">
@@ -628,20 +728,10 @@ import onoffrice.weatherhelp.data.remote.RetrofitException</custom-info>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
           <caret line="22" column="58" selection-start-line="22" selection-start-column="58" selection-end-line="22" selection-end-column="58" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/ServiceGenerator.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="1" selection-start-line="24" selection-start-column="1" selection-end-line="24" selection-end-column="1" />
-          <folding>
-            <element signature="e#43#246#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -655,54 +745,10 @@ import onoffrice.weatherhelp.data.remote.RetrofitException</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/NetworkConstants.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="29" selection-start-column="29" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="19" column="27" selection-start-line="19" selection-start-column="27" selection-end-line="19" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/datasources/WeatherDataSource.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="31" selection-start-line="13" selection-start-column="31" selection-end-line="13" selection-end-column="31" />
-          <folding>
-            <element signature="e#55#223#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/SingleLiveEvent.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/repositories/WeatherRepository.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="19" lean-forward="true" selection-start-column="19" selection-end-column="19" />
-          <folding>
-            <element signature="e#49#215#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/services/WeatherService.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
-          <folding>
-            <element signature="e#52#173#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -713,19 +759,101 @@ import onoffrice.weatherhelp.data.remote.RetrofitException</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt">
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.simpleframework/simple-xml/2.7.1/2a949576bb8da7514024dc0b84efeeb2fc902a0/simple-xml-2.7.1-sources.jar!/org/simpleframework/xml/Attribute.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="227">
+          <caret line="37" column="18" selection-start-line="37" selection-start-column="18" selection-end-line="37" selection-end-column="18" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/models/WeatherResponse.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="414">
-          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+        <state relative-caret-position="198">
+          <caret line="19" column="24" selection-start-line="19" selection-start-column="24" selection-end-line="19" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/models/CitiesByState.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" selection-start-line="2" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="753">
+          <caret line="49" selection-start-line="49" selection-end-line="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/repositories/WeatherRepository.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="38" selection-end-line="13" selection-end-column="38" />
           <folding>
-            <element signature="e#50#193#0" expanded="true" />
+            <element signature="e#49#208#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/ServiceGenerator.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="12" column="33" selection-start-line="12" selection-start-column="33" selection-end-line="12" selection-end-column="33" />
+          <folding>
+            <element signature="e#43#236#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/datasources/WeatherDataSource.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding>
+            <element signature="e#55#223#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/data/remote/services/WeatherService.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="8" selection-start-line="11" selection-start-column="8" selection-end-line="11" selection-end-column="8" />
+          <folding>
+            <element signature="e#52#242#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/NetworkConstants.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="6" column="43" selection-start-line="6" selection-start-column="43" selection-end-line="6" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build/generated/source/buildConfig/debug/onoffrice/weatherhelp/BuildConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="14" column="29" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="15" column="92" selection-start-line="15" selection-start-column="92" selection-end-line="15" selection-end-column="92" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/onoffrice/weatherhelp/ui/home/HomeViewModel.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#39#360#0" expanded="true" />
           </folding>
         </state>
       </provider>

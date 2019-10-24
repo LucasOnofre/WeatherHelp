@@ -9,7 +9,7 @@ object WeatherDataSource {
 
     private val service = ServiceGenerator.createService(
         WeatherService::class.java,
-        NetworkConstants.BASE_URL)
+        NetworkConstants.LOCALE_URL)
 
-    fun getCitys() = service.getCitys()
+    fun getAllCities() = service.getAllCities()
 }
