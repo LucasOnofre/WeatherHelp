@@ -3,35 +3,36 @@ package onoffrice.weatherhelp.ui.home
 import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
 import android.util.Log
 import androidx.lifecycle.Observer
 import onoffrice.weatherhelp.R
+import onoffrice.weatherhelp.data.remote.models.BrState
+import onoffrice.weatherhelp.weatherhelp.Constants
 import org.jetbrains.anko.intentFor
 import org.koin.android.ext.android.inject
 
-class HomeActivity : AppCompatActivity() {
+class StateCitiesActivity : AppCompatActivity() {
 
-    private val homeViewModel by inject<HomeViewModel>()
+    private val homeViewModel by inject<StateCitiesViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        homeViewModel.getCitys()
+        homeViewModel.getCities(intent.getSerializableExtra(Constants.EXTRA_SELECTED_STATE) as BrState)
         setObservables()
     }
 
     private fun setObservables() {
         homeViewModel.run {
-            isLoading.observe(this@HomeActivity, Observer {
+            isLoading.observe(this@StateCitiesActivity, Observer {
 
             })
 
-            errorMsg.observe(this@HomeActivity, Observer {
+            errorMsg.observe(this@StateCitiesActivity, Observer {
 
             })
 
-            responseBody.observe(this@HomeActivity, Observer {
+            responseBody.observe(this@StateCitiesActivity, Observer {
                 Log.i("RESPOSTA",it.toString())
             })
 
@@ -40,4 +41,5 @@ class HomeActivity : AppCompatActivity() {
 }
 
 
-fun Context.createHomeIntent() = intentFor<HomeActivity>()
+fun Context.createHomeIntent(selectedState: BrState)
+        = intentFor<StateCitiesActivity>(Constants.EXTRA_SELECTED_STATE to selectedState)

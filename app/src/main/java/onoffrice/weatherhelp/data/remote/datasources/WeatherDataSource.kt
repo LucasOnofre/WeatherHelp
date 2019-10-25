@@ -2,6 +2,7 @@ package onoffrice.weatherhelp.data.remote.datasources
 
 import onoffrice.weatherhelp.NetworkConstants
 import onoffrice.weatherhelp.data.remote.ServiceGenerator
+import onoffrice.weatherhelp.data.remote.models.BrState
 import onoffrice.weatherhelp.data.remote.services.WeatherService
 
 
@@ -11,5 +12,5 @@ object WeatherDataSource {
         WeatherService::class.java,
         NetworkConstants.LOCALE_URL)
 
-    fun getAllCities() = service.getAllCities()
+    fun getAllCities(state: String) = service.getAllCities(state)
 }

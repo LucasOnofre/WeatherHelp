@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.os.Handler
 import onoffrice.weatherhelp.R
 import onoffrice.weatherhelp.ui.home.createHomeIntent
+import onoffrice.weatherhelp.ui.states.createStatesIntent
 import onoffrice.weatherhelp.utils.extensions.startActivitySlideTransition
 
 class SplashActivity : AppCompatActivity() {
@@ -14,7 +15,7 @@ class SplashActivity : AppCompatActivity() {
         setContentView(R.layout.activity_splash)
 
         Handler().postDelayed({
-            startActivitySlideTransition(createHomeIntent())
+            startActivitySlideTransition(createStatesIntent())
             finish()
         }, 2000)
     }

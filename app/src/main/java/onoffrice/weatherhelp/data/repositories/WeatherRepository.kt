@@ -6,11 +6,11 @@ import onoffrice.weatherhelp.data.remote.models.CitiesByState
 
 interface WeatherRepository {
 
-    fun getCities(): Single<List<CitiesByState>>
+    fun getCities(state: String): Single<List<CitiesByState>>
 }
 
 object WeatherRepositoryImplementation: WeatherRepository {
-    override fun getCities(): Single<List<CitiesByState>> {
-        return WeatherDataSource.getAllCities()
+    override fun getCities(state: String): Single<List<CitiesByState>> {
+        return WeatherDataSource.getAllCities(state)
     }
 }

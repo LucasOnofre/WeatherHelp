@@ -23,7 +23,8 @@ class BaseApplication : MultiDexApplication() {
 
             modules(listOf(
                     KoinInjector.splashModule,
-                    KoinInjector.homeModule
+                    KoinInjector.stateModule,
+                    KoinInjector.stateCitiesModule
             ))
         }
     }
