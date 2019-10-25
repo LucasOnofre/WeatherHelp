@@ -5,12 +5,14 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_states.*
+import onoffrice.weatherhelp.BaseApplication
 import onoffrice.weatherhelp.R
 import onoffrice.weatherhelp.ui.adapter.BrStatesAdapter
+import onoffrice.weatherhelp.utils.BaseActivity
 import org.jetbrains.anko.intentFor
 import org.koin.android.ext.android.inject
 
-class StatesActivity : AppCompatActivity() {
+class StatesActivity : BaseActivity() {
 
     private val stateViewModel by inject<StatesViewModel>()
 
@@ -29,6 +31,7 @@ class StatesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_states)
+        setToolbar(getString(R.string.states_toolbar_title),true)
         setAdapter()
     }
 

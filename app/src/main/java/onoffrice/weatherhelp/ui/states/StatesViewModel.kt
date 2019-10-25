@@ -3,9 +3,8 @@ package onoffrice.weatherhelp.ui.states
 import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable
 import onoffrice.weatherhelp.SingleLiveEvent
-import onoffrice.weatherhelp.data.remote.models.CitiesByState
 
-class StatesViewModel () : ViewModel() {
+class StatesViewModel : ViewModel() {
 
     private val disposable = CompositeDisposable()
 

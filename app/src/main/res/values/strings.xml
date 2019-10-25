@@ -22,6 +22,12 @@
     <!--CONTENT DESCRIPTION-->
     <string name="error">Erro</string>
 
+    <!--SPLASH-->
+    <string name="splash_logo_title">WeatherHelp!</string>
+
+    <!--BR STATES-->
+    <string name="states_toolbar_title">Estados Brasileiros</string>
+
     <string-array name="all_br_states_list">
         <item>AC</item>
         <item>AL</item>
@@ -50,6 +56,5 @@
         <item>SP</item>
         <item>SE</item>
         <item>TO</item>
-
     </string-array>
 </resources>
