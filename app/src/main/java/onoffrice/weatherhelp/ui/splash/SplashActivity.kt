@@ -1,13 +1,10 @@
 package onoffrice.weatherhelp.ui.splash
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
-import android.view.animation.Animation
-import android.view.animation.AnimationUtils
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_splash.*
 import onoffrice.weatherhelp.R
-import onoffrice.weatherhelp.ui.home.createHomeIntent
 import onoffrice.weatherhelp.ui.states.createStatesIntent
 import onoffrice.weatherhelp.utils.extensions.fadeInAnimation
 import onoffrice.weatherhelp.utils.extensions.startActivitySlideTransition

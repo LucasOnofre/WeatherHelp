@@ -18,7 +18,7 @@ class StateCitiesActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
-        homeViewModel.getCities(intent.getSerializableExtra(Constants.EXTRA_SELECTED_STATE) as BrState)
+        homeViewModel.getCities(intent.getSerializableExtra(Constants.EXTRA_SELECTED_STATE) as String)
         setObservables()
     }
 
@@ -32,7 +32,7 @@ class StateCitiesActivity : AppCompatActivity() {
 
             })
 
-            responseBody.observe(this@StateCitiesActivity, Observer {
+            response.observe(this@StateCitiesActivity, Observer {
                 Log.i("RESPOSTA",it.toString())
             })
 
@@ -41,5 +41,5 @@ class StateCitiesActivity : AppCompatActivity() {
 }
 
 
-fun Context.createHomeIntent(selectedState: BrState)
+fun Context.createStateCitiesIntent(selectedState: String)
         = intentFor<StateCitiesActivity>(Constants.EXTRA_SELECTED_STATE to selectedState)

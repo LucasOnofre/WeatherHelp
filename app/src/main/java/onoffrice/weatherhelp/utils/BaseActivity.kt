@@ -8,9 +8,9 @@ import onoffrice.weatherhelp.R
 abstract class BaseActivity : AppCompatActivity() {
 
     //TOOLBAR METHODS
-    fun setToolbar(title: String, displayHomeAsUpEnabled: Boolean) {
+    fun setToolbar(title: String, displayHomeAsUpEnabled: Boolean? = false) {
         setToolbar(title)
-        supportActionBar!!.setDisplayHomeAsUpEnabled(displayHomeAsUpEnabled)
+        displayHomeAsUpEnabled?.let { supportActionBar!!.setDisplayHomeAsUpEnabled(it) }
         supportActionBar!!.setHomeAsUpIndicator(R.drawable.ic_back)
 
     }

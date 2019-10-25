@@ -8,12 +8,10 @@ class StatesViewModel : ViewModel() {
 
     private val disposable = CompositeDisposable()
 
-    var errorMsg            = SingleLiveEvent<String>()
-    var isLoading           = SingleLiveEvent<Boolean>()
-    var responseBody        = SingleLiveEvent<Unit>()
+    var openStateCities = SingleLiveEvent<String>()
 
-    fun handleSelectedState(selectedState: String) {
-
+    fun handleSelectedState(selectedState: String?) {
+        openStateCities.value = selectedState ?: "SP"
     }
 
     override fun onCleared() {
