@@ -4,9 +4,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import kotlinx.android.synthetic.main.adapter_state_item.view.*
+import kotlinx.android.synthetic.main.adapter_common_list_item.view.*
 import onoffrice.weatherhelp.R
-
 
 class BrStatesAdapter (
     private val listener:StateClickListener
@@ -25,8 +24,7 @@ class BrStatesAdapter (
 
     override fun onCreateViewHolder(parent: ViewGroup, p1: Int): StateViewHolder {
 
-        val view: View =
-            LayoutInflater.from(parent.context).inflate(R.layout.adapter_state_item, parent, false)
+        val view: View = LayoutInflater.from(parent.context).inflate(R.layout.adapter_common_list_item, parent, false)
 
         return StateViewHolder(view)
     }

@@ -10,8 +10,8 @@ class StatesViewModel : ViewModel() {
 
     var openStateCities = SingleLiveEvent<String>()
 
-    fun handleSelectedState(selectedState: String?) {
-        openStateCities.value = selectedState ?: "SP"
+    fun handleSelectedState(selectedState: String) {
+        openStateCities.value = selectedState
     }
 
     override fun onCleared() {

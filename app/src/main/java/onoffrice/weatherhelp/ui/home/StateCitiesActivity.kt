@@ -1,14 +1,13 @@
 package onoffrice.weatherhelp.ui.home
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import onoffrice.weatherhelp.R
-import onoffrice.weatherhelp.data.remote.models.BrState
 import onoffrice.weatherhelp.weatherhelp.Constants
 import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
 
 class StateCitiesActivity : AppCompatActivity() {
@@ -29,17 +28,15 @@ class StateCitiesActivity : AppCompatActivity() {
             })
 
             errorMsg.observe(this@StateCitiesActivity, Observer {
-
+                toast(it)
             })
 
             response.observe(this@StateCitiesActivity, Observer {
-                Log.i("RESPOSTA",it.toString())
-            })
 
+            })
         }
     }
 }
-
 
 fun Context.createStateCitiesIntent(selectedState: String)
         = intentFor<StateCitiesActivity>(Constants.EXTRA_SELECTED_STATE to selectedState)
