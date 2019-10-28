@@ -26,6 +26,7 @@
         </activity>
         <activity android:name=".ui.states.StatesActivity" />
         <activity android:name=".ui.home.StateCitiesActivity" />
+        <activity android:name=".ui.cityInfo.CityInfoActivity" />
     </application>
 
 </manifest>

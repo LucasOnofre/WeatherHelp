@@ -14,7 +14,7 @@ class BrStateCitiesAdapter (
 ): RecyclerView.Adapter<BrStateCitiesAdapter.StateViewHolder>() {
 
     interface CityClickListener {
-        fun onStateClicked(selectedCity: CityResume)
+        fun onCityClicked(selectedCity: CityResume)
     }
 
     var list: MutableList<CityResume> = mutableListOf()
@@ -44,7 +44,7 @@ class BrStateCitiesAdapter (
                 itemName.text = item.name
 
                 setOnClickListener {
-                   listener.onStateClicked(item)
+                   listener.onCityClicked(item)
                 }
             }
         }

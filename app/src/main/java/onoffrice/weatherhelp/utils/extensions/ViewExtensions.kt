@@ -1,31 +1,10 @@
 package onoffrice.weatherhelp.utils.extensions
 
 import android.content.Context
-import android.content.res.Resources
-import android.graphics.drawable.Drawable
-import android.text.Editable
-import android.text.SpannableString
-import android.text.TextWatcher
-import android.text.method.LinkMovementMethod
-import android.util.TypedValue
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
-import android.widget.EditText
-import android.widget.ImageView
-import android.widget.TextView
-import androidx.coordinatorlayout.widget.CoordinatorLayout
-import androidx.core.content.ContextCompat
-import com.bumptech.glide.Glide
-import com.bumptech.glide.request.RequestOptions
-import com.bumptech.glide.request.target.SimpleTarget
-import com.google.android.material.snackbar.Snackbar
-import io.reactivex.Observable
-import io.reactivex.ObservableOnSubscribe
 import onoffrice.weatherhelp.R
-import java.io.File
-import java.util.concurrent.TimeUnit
-
 
 
 fun View.setVisible(visible: Boolean, useInvisible: Boolean = false) {

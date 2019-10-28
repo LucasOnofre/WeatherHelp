@@ -50,7 +50,9 @@ class StatesActivity : BaseActivity() {
     }
 
     private fun openStateCities(selectedState: String) {
-        startActivitySlideTransition(createStateCitiesIntent(selectedState))
+        startActivitySlideTransition(
+           createStateCitiesIntent(selectedState)
+        )
     }
 }
 

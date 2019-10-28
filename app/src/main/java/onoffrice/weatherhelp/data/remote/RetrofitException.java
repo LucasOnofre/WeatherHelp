@@ -2,8 +2,10 @@ package onoffrice.weatherhelp.data.remote;
 
 
 import com.google.gson.Gson;
+
 import java.io.IOException;
 import java.lang.annotation.Annotation;
+
 import okhttp3.ResponseBody;
 import onoffrice.weatherhelp.data.remote.models.ErrorResponse;
 import retrofit2.Converter;

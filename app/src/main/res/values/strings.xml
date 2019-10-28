@@ -31,6 +31,9 @@
     <!--STATES CITIES-->
     <string name="cities_toolbar_title">Cidades de %s</string>
 
+    <!--CITY INFO-->
+    <string name="city_info_toolbar_title">Dados climáticos de %s</string>
+
     <string-array name="all_br_states_list">
         <item>AC</item>
         <item>AL</item>

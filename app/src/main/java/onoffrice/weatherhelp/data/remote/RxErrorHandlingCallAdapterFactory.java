@@ -1,7 +1,6 @@
 package onoffrice.weatherhelp.data.remote;
-import com.google.gson.JsonParseException;
 
-import onoffrice.weatherhelp.BuildConfig;
+import com.google.gson.JsonParseException;
 
 import java.io.IOException;
 import java.lang.annotation.Annotation;
@@ -12,6 +11,7 @@ import java.net.UnknownHostException;
 import io.reactivex.Single;
 import io.reactivex.SingleSource;
 import io.reactivex.functions.Function;
+import onoffrice.weatherhelp.BuildConfig;
 import retrofit2.Call;
 import retrofit2.CallAdapter;
 import retrofit2.HttpException;

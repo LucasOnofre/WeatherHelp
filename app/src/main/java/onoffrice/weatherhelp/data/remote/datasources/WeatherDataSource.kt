@@ -2,15 +2,14 @@ package onoffrice.weatherhelp.data.remote.datasources
 
 import onoffrice.weatherhelp.NetworkConstants
 import onoffrice.weatherhelp.data.remote.ServiceGenerator
-import onoffrice.weatherhelp.data.remote.models.BrState
 import onoffrice.weatherhelp.data.remote.services.WeatherService
 
 
 object WeatherDataSource {
 
-    private val service = ServiceGenerator.createService(
+    private val subService = ServiceGenerator.createService(
         WeatherService::class.java,
-        NetworkConstants.LOCALE_URL)
+        NetworkConstants.WEATHER_URL)
 
-    fun getAllCities(state: String) = service.getAllCities(state)
+    fun getCityInfo(city: String) = subService.getCityInfo(city = city)
 }

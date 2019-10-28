@@ -1,6 +1,5 @@
 package onoffrice.weatherhelp
 
-import android.app.Application
 import androidx.multidex.MultiDexApplication
 import onoffrice.weatherhelp.data.KoinInjector
 import onoffrice.weatherhelp.data.local.PreferencesHelper
@@ -24,7 +23,8 @@ class BaseApplication : MultiDexApplication() {
             modules(listOf(
                     KoinInjector.splashModule,
                     KoinInjector.stateModule,
-                    KoinInjector.stateCitiesModule
+                    KoinInjector.stateCitiesModule,
+                    KoinInjector.cityInfoModule
             ))
         }
     }

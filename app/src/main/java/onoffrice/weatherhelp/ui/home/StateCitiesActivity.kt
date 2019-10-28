@@ -4,21 +4,21 @@ import android.content.Context
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_cities.*
-import kotlinx.android.synthetic.main.activity_states.*
 import kotlinx.android.synthetic.main.custom_search_component.*
 import onoffrice.weatherhelp.R
 import onoffrice.weatherhelp.data.remote.models.CityResume
 import onoffrice.weatherhelp.ui.adapter.BrStateCitiesAdapter
+import onoffrice.weatherhelp.ui.cityInfo.createCityInfoIntent
 import onoffrice.weatherhelp.utils.BaseActivity
+import onoffrice.weatherhelp.utils.extensions.startActivitySlideTransition
 import onoffrice.weatherhelp.weatherhelp.Constants
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
-import java.util.ArrayList
+import java.util.*
 
 class StateCitiesActivity : BaseActivity() {
 
@@ -27,8 +27,8 @@ class StateCitiesActivity : BaseActivity() {
 
     private val adapter by lazy {
         val adapter = BrStateCitiesAdapter(object : BrStateCitiesAdapter.CityClickListener{
-            override fun onStateClicked(selectedCity: CityResume) {
-
+            override fun onCityClicked(selectedCity: CityResume) {
+                homeViewModel.handleCityClicked(selectedCity)
             }
         })
         val layoutManager                = LinearLayoutManager(this)
@@ -70,6 +70,10 @@ class StateCitiesActivity : BaseActivity() {
             response.observe(this@StateCitiesActivity, Observer {
                 citiesList = it.toMutableList()
                 adapter.list = citiesList
+            })
+
+            openCityInfo.observe(this@StateCitiesActivity, Observer { selectedCity ->
+               openCityInfo(selectedCity)
             })
         }
     }
@@ -118,6 +122,10 @@ class StateCitiesActivity : BaseActivity() {
                 filteredList.add(city)
             }
         }
+    }
+
+    private fun openCityInfo(selectedCity: String) {
+        startActivitySlideTransition(createCityInfoIntent(selectedCity))
     }
 }
 

@@ -5,20 +5,21 @@ import io.reactivex.disposables.CompositeDisposable
 import onoffrice.weatherhelp.SingleLiveEvent
 import onoffrice.weatherhelp.data.local.PreferencesHelper
 import onoffrice.weatherhelp.data.remote.models.CityResume
-import onoffrice.weatherhelp.data.repositories.WeatherRepository
+import onoffrice.weatherhelp.data.repositories.CitiesRepository
 import onoffrice.weatherhelp.utils.extensions.singleSubscribe
 
-class StateCitiesViewModel (private val weatherRepository: WeatherRepository) : ViewModel() {
+class StateCitiesViewModel (private val citiesRepository: CitiesRepository) : ViewModel() {
 
     private val disposable = CompositeDisposable()
 
-    var errorMsg  = SingleLiveEvent<String>()
-    var isLoading = SingleLiveEvent<Boolean>()
-    var response  = SingleLiveEvent<List<CityResume>>()
+    var errorMsg     = SingleLiveEvent<String>()
+    var isLoading    = SingleLiveEvent<Boolean>()
+    var response     = SingleLiveEvent<List<CityResume>>()
+    var openCityInfo = SingleLiveEvent<String>()
 
     fun getCities(state: String) {
         isLoading.value = true
-        disposable.add(weatherRepository.getCities(state).singleSubscribe(
+        disposable.add(citiesRepository.getCities(state).singleSubscribe(
             onSuccess = {
 
                 PreferencesHelper.cities = it
@@ -34,6 +35,10 @@ class StateCitiesViewModel (private val weatherRepository: WeatherRepository) : 
                 loadCities()
             }
         ))
+    }
+
+    fun handleCityClicked(city: CityResume) {
+        openCityInfo.value = city.name
     }
 
     private fun loadCities() {
