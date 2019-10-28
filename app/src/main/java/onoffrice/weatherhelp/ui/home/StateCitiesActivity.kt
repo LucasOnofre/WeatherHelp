@@ -2,11 +2,14 @@ package onoffrice.weatherhelp.ui.home
 
 import android.content.Context
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_cities.*
 import kotlinx.android.synthetic.main.activity_states.*
+import kotlinx.android.synthetic.main.custom_search_component.*
 import onoffrice.weatherhelp.R
 import onoffrice.weatherhelp.data.remote.models.CityResume
 import onoffrice.weatherhelp.ui.adapter.BrStateCitiesAdapter
@@ -15,9 +18,11 @@ import onoffrice.weatherhelp.weatherhelp.Constants
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
+import java.util.ArrayList
 
 class StateCitiesActivity : BaseActivity() {
 
+    private lateinit var citiesList: MutableList<CityResume>
     private lateinit var selectedState: String
 
     private val adapter by lazy {
@@ -40,7 +45,12 @@ class StateCitiesActivity : BaseActivity() {
         getExtras()
         setToolbar(getString(R.string.cities_toolbar_title, selectedState))
         setObservables()
+        setListeners()
         homeViewModel.getCities(selectedState)
+    }
+
+    private fun setListeners() {
+        setupSearchViewListener()
     }
 
     private fun getExtras() {
@@ -58,8 +68,55 @@ class StateCitiesActivity : BaseActivity() {
             })
 
             response.observe(this@StateCitiesActivity, Observer {
-                adapter.list = it
+                citiesList = it.toMutableList()
+                adapter.list = citiesList
             })
+        }
+    }
+
+    private fun setupSearchViewListener() {
+
+        search_src_text.addTextChangedListener(object : TextWatcher {
+            override fun afterTextChanged(text: Editable?) {}
+
+            override fun beforeTextChanged(p0: CharSequence?, start: Int, count: Int, after: Int) {}
+
+            /**
+            Set's the filter by any input change
+             **/
+            override fun onTextChanged(text: CharSequence?, start: Int, before: Int, count: Int) {
+                text.let {
+                    if (it?.length != 0) {
+                        val input = text.toString().toLowerCase()
+                        filterList(input)
+                    }
+                }
+            }
+        })
+    }
+
+    /**
+    Filter's the cities list and sends to adapter the list filtered
+     **/
+    private fun filterList(input: String) {
+        val filteredList = ArrayList<CityResume>()
+
+        for (city in citiesList) {
+            val cityName = city.name.toLowerCase()
+
+            checkTextEquality(cityName, input, filteredList, city)
+        }
+        adapter.setFilter(filteredList)
+    }
+
+    /**
+    Check's if the title is equal to the input text
+     **/
+    private fun checkTextEquality(cityName: String?, input: String, filteredList: MutableList<CityResume>, city: CityResume) {
+        if (cityName != null) {
+            if (cityName.contains(input)) {
+                filteredList.add(city)
+            }
         }
     }
 }

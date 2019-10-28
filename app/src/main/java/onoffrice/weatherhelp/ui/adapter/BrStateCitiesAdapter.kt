@@ -17,7 +17,7 @@ class BrStateCitiesAdapter (
         fun onStateClicked(selectedCity: CityResume)
     }
 
-    var list: List<CityResume> = listOf()
+    var list: MutableList<CityResume> = mutableListOf()
         set(value) {
             field = value
             notifyDataSetChanged()
@@ -48,6 +48,13 @@ class BrStateCitiesAdapter (
                 }
             }
         }
+    }
+
+    /** Cleans the list and adds the new filtered list **/
+    fun setFilter(filteredList: ArrayList<CityResume>) {
+        list = ArrayList()
+        list.addAll(filteredList)
+        notifyDataSetChanged()
     }
 }
 
