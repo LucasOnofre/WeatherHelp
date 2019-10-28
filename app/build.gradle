@@ -13,8 +13,10 @@ android {
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
-        buildConfigField "String", 'BASE_URL', "\"http://apiadvisor.climatempo.com.br/api/v1\""
-        buildConfigField "String", "API_KEY", "\"c71f1679d9701ee5371476edf6df27be\""
+        buildConfigField "String", 'MAIN_BASE_URL', "\"http://apiadvisor.climatempo.com.br/api/v1\""
+        buildConfigField "String", 'SUB_BASE_URL', "\"https://api.hgbrasil.com\""
+        buildConfigField "String", "MAIN_API_KEY", "\"c71f1679d9701ee5371476edf6df27be\""
+        buildConfigField "String", "SUB_API_KEY", "\"83fcdd06\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

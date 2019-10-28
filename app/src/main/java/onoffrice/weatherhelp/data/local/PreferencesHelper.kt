@@ -2,6 +2,9 @@ package onoffrice.weatherhelp.data.local
 
 import android.content.Context
 import android.content.SharedPreferences
+import com.google.gson.Gson
+import onoffrice.weatherhelp.data.remote.models.CitiesLocalPersistance
+import onoffrice.weatherhelp.data.remote.models.CityResume
 import onoffrice.weatherhelp.weatherhelp.Constants.PACKAGE_NAME
 
 object PreferencesHelper {
@@ -18,6 +21,8 @@ object PreferencesHelper {
     private const val PREF_USER_ID              = "$SHARED_PREFERENCES_NAME.PREF_USER_ID"
     private const val PREF_BASIC_AUTH           = "$SHARED_PREFERENCES_NAME.PREF_BASIC_AUTH"
 
+    private const val PREF_CITIES   = "$SHARED_PREFERENCES_NAME.PREF_CITIES"
+
 
     fun clearBasicAuth() {
         sharedPreferences.edit().putString(PREF_BASIC_AUTH, "").apply()
@@ -26,4 +31,17 @@ object PreferencesHelper {
     fun clearSharedPref() {
         sharedPreferences.edit().clear().apply()
     }
+
+    var cities: List<CityResume>?
+        get() {
+            val userJson = sharedPreferences.getString(PREF_CITIES, "")
+            val result = Gson().fromJson(userJson, CitiesLocalPersistance::class.java) ?: return listOf()
+            return result.cities
+        }
+        set(value) {
+            val banners = CitiesLocalPersistance(value ?: listOf())
+            val json = Gson().toJson(banners, CitiesLocalPersistance::class.java)
+            sharedPreferences.edit().putString(PREF_CITIES, json).apply()
+        }
+
 }

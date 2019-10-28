@@ -42,7 +42,7 @@ class BrStatesAdapter (
         fun bind(item: String) {
             itemView.apply {
 
-                stateName.text = item
+                itemName.text = item
 
                 setOnClickListener {
                    listener.onStateClicked(item)

@@ -28,6 +28,9 @@
     <!--BR STATES-->
     <string name="states_toolbar_title">Estados Brasileiros</string>
 
+    <!--STATES CITIES-->
+    <string name="cities_toolbar_title">Cidades de %s</string>
+
     <string-array name="all_br_states_list">
         <item>AC</item>
         <item>AL</item>
