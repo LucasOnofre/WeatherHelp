@@ -7,6 +7,7 @@ import kotlinx.android.synthetic.main.activity_city_info.*
 import onoffrice.weatherhelp.R
 import onoffrice.weatherhelp.data.remote.models.CityInfo
 import onoffrice.weatherhelp.utils.BaseActivity
+import onoffrice.weatherhelp.utils.extensions.setVisible
 import onoffrice.weatherhelp.weatherhelp.Constants
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
@@ -38,7 +39,8 @@ class CityInfoActivity : BaseActivity() {
     private fun setObservables() {
         cityInfoViewModel.run {
             isLoading.observe(this@CityInfoActivity, Observer {
-
+                progressLayout.setVisible(it)
+                cityInfoLayout.setVisible(!it)
             })
 
             errorMsg.observe(this@CityInfoActivity, Observer {
