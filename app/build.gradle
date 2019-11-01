@@ -16,7 +16,7 @@ android {
         buildConfigField "String", 'MAIN_BASE_URL', "\"http://apiadvisor.climatempo.com.br/api/v1\""
         buildConfigField "String", 'SUB_BASE_URL', "\"https://api.hgbrasil.com\""
         buildConfigField "String", "MAIN_API_KEY", "\"c71f1679d9701ee5371476edf6df27be\""
-        buildConfigField "String", "SUB_API_KEY", "\"83fcdd06\""
+        buildConfigField "String", "SUB_API_KEY", "\"61b12106\""
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

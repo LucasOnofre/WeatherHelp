@@ -24,12 +24,6 @@ fun Context.showKeyboard() {
     imm.toggleSoftInput(InputMethodManager.SHOW_FORCED, 0)
 }
 
-fun Context.isNetworkConnected(): Boolean {
-    val cm = this.getSystemService(Context.CONNECTIVITY_SERVICE) as ConnectivityManager
-    val activeNetwork = cm.activeNetworkInfo
-    return activeNetwork != null && activeNetwork.isConnectedOrConnecting
-}
-
 fun Activity.startActivitySlideTransition(intent: Intent, requestCode: Int? = null) {
     startActivityTransition(intent, R.anim.anim_close_scale, R.anim.slide_in_left, 1, requestCode)
 }

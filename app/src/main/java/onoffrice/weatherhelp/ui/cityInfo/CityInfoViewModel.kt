@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import io.reactivex.disposables.CompositeDisposable
 import onoffrice.weatherhelp.SingleLiveEvent
 import onoffrice.weatherhelp.data.local.PreferencesHelper
-import onoffrice.weatherhelp.data.remote.models.CityResume
+import onoffrice.weatherhelp.data.remote.models.CityInfo
 import onoffrice.weatherhelp.data.repositories.WeatherRepository
 import onoffrice.weatherhelp.utils.extensions.singleSubscribe
 
@@ -14,14 +14,13 @@ class CityInfoViewModel (private val weatherRepository: WeatherRepository) : Vie
 
     var errorMsg  = SingleLiveEvent<String>()
     var isLoading = SingleLiveEvent<Boolean>()
-    var response  = SingleLiveEvent<List<CityResume>>()
+    var response  = SingleLiveEvent<CityInfo>()
 
     fun getCityInfo(city: String) {
         isLoading.value = true
         disposable.add(weatherRepository.getCityInfo(city).singleSubscribe(
             onSuccess = {
-
-                PreferencesHelper.cities = it
+                PreferencesHelper.lastCityChecked = it
 
                 isLoading.value = false
                 response.value  = it
@@ -37,10 +36,8 @@ class CityInfoViewModel (private val weatherRepository: WeatherRepository) : Vie
     }
 
     private fun loadCities() {
-        PreferencesHelper.cities?.let {
-            if (it.isNotEmpty()) {
-                response.value = it
-            }
+        PreferencesHelper.lastCityChecked?.let {
+            response.value = it
         }
     }
 
