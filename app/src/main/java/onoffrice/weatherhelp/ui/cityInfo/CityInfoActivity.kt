@@ -56,7 +56,7 @@ class CityInfoActivity : BaseActivity() {
 
     private fun setViews(cityInfo: CityInfo?) {
 
-        if (cityInfo?.by != "default") {
+        if (cityInfo?.by != "default" || cityInfo?.results?.isSaved == false) {
             setToolbar(getString(R.string.city_info_toolbar_title, selectedCity), true)
 
             cityName.text = cityInfo?.results?.city_name ?: selectedCity
@@ -71,9 +71,9 @@ class CityInfoActivity : BaseActivity() {
             sunriseValue.text = cityInfo?.results?.sunrise ?: "21:00"
 
         } else {
-            setToolbar(getString(R.string.city_info_toolbar_title, "São Paulo"), true)
+            setToolbar(getString(R.string.city_info_toolbar_title, selectedCity), true)
 
-            cityName.text = "São Paulo"
+            cityName.text = selectedCity
             date.text = "11/10/2019"
             timeAccess.text = "21:00"
             dayStatus.text = "Noite"

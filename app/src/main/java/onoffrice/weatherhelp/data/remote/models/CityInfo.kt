@@ -1,7 +1,7 @@
 package onoffrice.weatherhelp.data.remote.models
 
 data class CityInfo(
-    val `by`: String? = "",
+    var `by`: String? = "",
     val execution_time: Float? = 0f,
     val from_cache: Boolean? = false,
     val results: Results? = Results(),
@@ -26,7 +26,8 @@ data class Results(
     val sunset: String? = "",
     val temp:Float? = 0f,
     val time: String? = "",
-    val wind_speedy: String? = ""
+    val wind_speedy: String? = "",
+    var isSaved: Boolean? = false
 )
 
 data class Forecast(

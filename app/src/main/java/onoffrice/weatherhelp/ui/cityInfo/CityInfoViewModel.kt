@@ -12,9 +12,9 @@ class CityInfoViewModel (private val weatherRepository: WeatherRepository) : Vie
 
     private val disposable = CompositeDisposable()
 
-    var errorMsg  = SingleLiveEvent<String>()
-    var isLoading = SingleLiveEvent<Boolean>()
-    var response  = SingleLiveEvent<CityInfo>()
+    var errorMsg       = SingleLiveEvent<String>()
+    var isLoading      = SingleLiveEvent<Boolean>()
+    var response       = SingleLiveEvent<CityInfo>()
 
     fun getCityInfo(city: String, selectedState: String) {
         isLoading.value = true
@@ -37,6 +37,8 @@ class CityInfoViewModel (private val weatherRepository: WeatherRepository) : Vie
 
     private fun loadCities() {
         PreferencesHelper.lastCityChecked?.let {
+            it.results?.isSaved = true
+            it.by = "default"
             response.value = it
         }
     }
