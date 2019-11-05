@@ -16,9 +16,9 @@ class CityInfoViewModel (private val weatherRepository: WeatherRepository) : Vie
     var isLoading = SingleLiveEvent<Boolean>()
     var response  = SingleLiveEvent<CityInfo>()
 
-    fun getCityInfo(city: String) {
+    fun getCityInfo(city: String, selectedState: String) {
         isLoading.value = true
-        disposable.add(weatherRepository.getCityInfo(city).singleSubscribe(
+        disposable.add(weatherRepository.getCityInfo(city, selectedState).singleSubscribe(
             onSuccess = {
                 PreferencesHelper.lastCityChecked = it
 

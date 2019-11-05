@@ -6,11 +6,13 @@ import onoffrice.weatherhelp.data.remote.models.CityInfo
 
 
 interface WeatherRepository {
-    fun getCityInfo(city: String): Single<CityInfo>
+    fun getCityInfo(city: String, selectedState: String): Single<CityInfo>
 }
 
 object WeatherRepositoryImplementation: WeatherRepository {
-    override fun getCityInfo(city: String): Single<CityInfo> {
-        return WeatherDataSource.getCityInfo(city)
+    override fun getCityInfo(city: String, selectedState: String): Single<CityInfo> {
+        return WeatherDataSource.getCityInfo(
+            "$city,${(selectedState.toUpperCase())}"
+        )
     }
 }

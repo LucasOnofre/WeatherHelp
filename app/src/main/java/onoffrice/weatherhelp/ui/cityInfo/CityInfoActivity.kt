@@ -16,6 +16,7 @@ import org.koin.android.ext.android.inject
 class CityInfoActivity : BaseActivity() {
 
     private lateinit var selectedCity: String
+    private lateinit var selectedState: String
 
     private val cityInfoViewModel by inject<CityInfoViewModel>()
 
@@ -23,14 +24,14 @@ class CityInfoActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_city_info)
         getExtras()
-        setToolbar(getString(R.string.city_info_toolbar_title, selectedCity))
         setObservables()
         setListeners()
-        cityInfoViewModel.getCityInfo(selectedCity)
+        cityInfoViewModel.getCityInfo(selectedCity, selectedState)
     }
 
     private fun getExtras() {
-        selectedCity = intent.getSerializableExtra(Constants.EXTRA_SELECTED_CITY) as String
+        selectedCity  = intent.getSerializableExtra(Constants.EXTRA_SELECTED_CITY) as String
+        selectedState = intent.getSerializableExtra(Constants.EXTRA_SELECTED_STATE) as String
     }
 
     private fun setListeners() {
@@ -54,18 +55,38 @@ class CityInfoActivity : BaseActivity() {
     }
 
     private fun setViews(cityInfo: CityInfo?) {
-        cityName.text = cityInfo?.results?.city_name ?: "São Paulo"
-        date.text = cityInfo?.results?.date ?: "11/10/2019"
-        timeAccess.text = cityInfo?.results?.time ?: "21:00"
-        dayStatus.text = cityInfo?.results?.currently?.toUpperCase() ?: "Noite"
-        description.text = cityInfo?.results?.description ?: "Tempo nublado"
-        temperature.text = "${cityInfo?.results?.temp.toString()}°C"
-        humidityValue.text = "${cityInfo?.results?.humidity.toString()}°%"
-        windSpeedyValue.text = "${cityInfo?.results?.humidity.toString()}°KM/H"
-        sunsetValue.text = cityInfo?.results?.sunset ?: "21:00"
-        sunriseValue.text = cityInfo?.results?.sunrise ?: "21:00"
+
+        if (cityInfo?.by != "default") {
+            setToolbar(getString(R.string.city_info_toolbar_title, selectedCity), true)
+
+            cityName.text = cityInfo?.results?.city_name ?: selectedCity
+            date.text = cityInfo?.results?.date ?: "11/10/2019"
+            timeAccess.text = cityInfo?.results?.time ?: "21:00"
+            dayStatus.text = cityInfo?.results?.currently?.toUpperCase() ?: "Noite"
+            description.text = cityInfo?.results?.description ?: "Tempo nublado"
+            temperature.text = "${cityInfo?.results?.temp.toString()}°C" ?: "25°C"
+            humidityValue.text = "${cityInfo?.results?.humidity.toString()}°%"
+            windSpeedyValue.text = "${cityInfo?.results?.humidity.toString()}°KM/H"
+            sunsetValue.text = cityInfo?.results?.sunset ?: "21:00"
+            sunriseValue.text = cityInfo?.results?.sunrise ?: "21:00"
+
+        } else {
+            setToolbar(getString(R.string.city_info_toolbar_title, "São Paulo"), true)
+
+            cityName.text = "São Paulo"
+            date.text = "11/10/2019"
+            timeAccess.text = "21:00"
+            dayStatus.text = "Noite"
+            description.text = "Tempo nublado"
+            temperature.text = "25°C"
+            humidityValue.text = "20%"
+            windSpeedyValue.text = "10°KM/H"
+            sunsetValue.text = "18:00"
+            sunriseValue.text = "06:00"
+        }
     }
 }
 
-fun Context.createCityInfoIntent(selectedCity: String)
-        = intentFor<CityInfoActivity>(Constants.EXTRA_SELECTED_CITY to selectedCity)
+fun Context.createCityInfoIntent(selectedCity: String, selectedState: String)
+        = intentFor<CityInfoActivity>(Constants.EXTRA_SELECTED_CITY to selectedCity,
+                                                Constants.EXTRA_SELECTED_STATE to selectedState)

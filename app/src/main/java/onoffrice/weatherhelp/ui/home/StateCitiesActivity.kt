@@ -43,7 +43,7 @@ class StateCitiesActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_cities)
         getExtras()
-        setToolbar(getString(R.string.cities_toolbar_title, selectedState))
+        setToolbar(getString(R.string.cities_toolbar_title, selectedState), true)
         setObservables()
         setListeners()
         homeViewModel.getCities(selectedState)
@@ -125,7 +125,7 @@ class StateCitiesActivity : BaseActivity() {
     }
 
     private fun openCityInfo(selectedCity: String) {
-        startActivitySlideTransition(createCityInfoIntent(selectedCity))
+        startActivitySlideTransition(createCityInfoIntent(selectedCity, selectedState))
     }
 }
 
