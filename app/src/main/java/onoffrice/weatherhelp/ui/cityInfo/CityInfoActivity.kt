@@ -12,6 +12,10 @@ import onoffrice.weatherhelp.weatherhelp.Constants
 import org.jetbrains.anko.intentFor
 import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
+import java.text.SimpleDateFormat
+import java.util.*
+
+
 
 class CityInfoActivity : BaseActivity() {
 
@@ -74,8 +78,8 @@ class CityInfoActivity : BaseActivity() {
             setToolbar(getString(R.string.city_info_toolbar_title, selectedCity), true)
 
             cityName.text = selectedCity
-            date.text = "11/10/2019"
-            timeAccess.text = "21:00"
+            date.text = SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(Date())
+            timeAccess.text = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date());
             dayStatus.text = "Noite"
             description.text = "Tempo nublado"
             temperature.text = "25°C"
