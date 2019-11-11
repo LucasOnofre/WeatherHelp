@@ -125,7 +125,10 @@ class StateCitiesActivity : BaseActivity() {
     }
 
     private fun openCityInfo(selectedCity: String) {
-        startActivitySlideTransition(createCityInfoIntent(selectedCity, selectedState))
+        if (isNetworkAvailable())
+         startActivitySlideTransition(createCityInfoIntent(selectedCity, selectedState))
+        else
+            toast("Rede Indisponível")
     }
 }
 

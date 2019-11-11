@@ -11,6 +11,7 @@ import onoffrice.weatherhelp.ui.home.createStateCitiesIntent
 import onoffrice.weatherhelp.utils.BaseActivity
 import onoffrice.weatherhelp.utils.extensions.startActivitySlideTransition
 import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.toast
 import org.koin.android.ext.android.inject
 
 class StatesActivity : BaseActivity() {
@@ -50,9 +51,10 @@ class StatesActivity : BaseActivity() {
     }
 
     private fun openStateCities(selectedState: String) {
-        startActivitySlideTransition(
-           createStateCitiesIntent(selectedState)
-        )
+        if (isNetworkAvailable())
+            startActivitySlideTransition(createStateCitiesIntent(selectedState))
+        else
+            toast("Rede Indisponível")
     }
 }
 
