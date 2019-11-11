@@ -7,12 +7,14 @@ import android.text.TextWatcher
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
 import kotlinx.android.synthetic.main.activity_cities.*
+import kotlinx.android.synthetic.main.activity_city_info.*
 import kotlinx.android.synthetic.main.custom_search_component.*
 import onoffrice.weatherhelp.R
 import onoffrice.weatherhelp.data.remote.models.CityResume
 import onoffrice.weatherhelp.ui.adapter.BrStateCitiesAdapter
 import onoffrice.weatherhelp.ui.cityInfo.createCityInfoIntent
 import onoffrice.weatherhelp.utils.BaseActivity
+import onoffrice.weatherhelp.utils.extensions.setVisible
 import onoffrice.weatherhelp.utils.extensions.startActivitySlideTransition
 import onoffrice.weatherhelp.weatherhelp.Constants
 import org.jetbrains.anko.intentFor
@@ -60,7 +62,8 @@ class StateCitiesActivity : BaseActivity() {
     private fun setObservables() {
         homeViewModel.run {
             isLoading.observe(this@StateCitiesActivity, Observer {
-
+                progressBarLayout.setVisible(it)
+                statesCitieslayout.setVisible(!it)
             })
 
             errorMsg.observe(this@StateCitiesActivity, Observer {

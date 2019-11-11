@@ -65,12 +65,12 @@ class CityInfoActivity : BaseActivity() {
 
             cityName.text = cityInfo?.results?.city_name ?: selectedCity
             date.text = cityInfo?.results?.date ?: "11/10/2019"
-            timeAccess.text = cityInfo?.results?.time ?: "21:00"
+            timeAccess.text = SimpleDateFormat("HH:mm:ss", Locale.getDefault()).format(Date());
             dayStatus.text = cityInfo?.results?.currently?.toUpperCase() ?: "Noite"
             description.text = cityInfo?.results?.description ?: "Tempo nublado"
             temperature.text = "${cityInfo?.results?.temp.toString()}°C" ?: "25°C"
             humidityValue.text = "${cityInfo?.results?.humidity.toString()}°%"
-            windSpeedyValue.text = "${cityInfo?.results?.humidity.toString()}°KM/H"
+            windSpeedyValue.text = "${cityInfo?.results?.humidity.toString()}KM/H"
             sunsetValue.text = cityInfo?.results?.sunset ?: "21:00"
             sunriseValue.text = cityInfo?.results?.sunrise ?: "21:00"
 
