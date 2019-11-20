@@ -1,0 +1,66 @@
+<resources>
+    <string name="app_name">WeatherHelp</string>
+
+    <!--ACTIONS-->
+    <string name="action_understood">Ok, entendi</string>
+    <string name="action_ok">OK, Entendi</string>
+    <string name="action_cancel">Cancelar</string>
+
+    <!--COMMON MESSAGES-->
+    <string name="common_error_title">Ops!</string>
+    <string name="continue_action">Continuar</string>
+    <string name="action_finish">Finalizar</string>
+    <string name="try_again_action">Tentar Novamente</string>
+
+    <!--DIALOG MESSAGES-->
+    <string name="progress_dialog_standard_msg">Aguarde um momento.</string>
+
+    <!--NETWORK ERRORS-->
+    <string name="network_error_timeout">Erro inesperado, por favor tente novamente.</string>
+    <string name="network_error_without_connection">Rede indisponível.</string>
+
+    <!--CONTENT DESCRIPTION-->
+    <string name="error">Erro</string>
+
+    <!--SPLASH-->
+    <string name="splash_logo_title">WeatherHelp!</string>
+
+    <!--BR STATES-->
+    <string name="states_toolbar_title">Estados Brasileiros</string>
+
+    <!--STATES CITIES-->
+    <string name="cities_toolbar_title">Cidades de %s</string>
+
+    <!--CITY INFO-->
+    <string name="city_info_toolbar_title">Dados climáticos de %s</string>
+
+    <string-array name="all_br_states_list">
+        <item>AC</item>
+        <item>AL</item>
+        <item>AP</item>
+        <item>AM</item>
+        <item>BA</item>
+        <item>CE</item>
+        <item>DF</item>
+        <item>ES</item>
+        <item>GO</item>
+        <item>MA</item>
+        <item>MT</item>
+        <item>MS</item>
+        <item>MG</item>
+        <item>PA</item>
+        <item>PB</item>
+        <item>PR</item>
+        <item>PE</item>
+        <item>PI</item>
+        <item>RJ</item>
+        <item>RN</item>
+        <item>RS</item>
+        <item>RO</item>
+        <item>RR</item>
+        <item>SC</item>
+        <item>SP</item>
+        <item>SE</item>
+        <item>TO</item>
+    </string-array>
+</resources>
